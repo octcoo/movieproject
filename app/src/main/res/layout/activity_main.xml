@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".view.activity.MainActivity">
 
         <FrameLayout
             android:id="@+id/activitymain_fragment"
@@ -14,13 +14,13 @@
             android:layout_weight="1">
 
       <fragment
-        android:name="com.example.movie.MovieFragment"
+        android:name="com.example.movie.view.fragment.MovieFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"/>
 
             <fragment
-                android:name="com.example.movie.TiketFragment"
+                android:name="com.example.movie.view.fragment.TiketFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"/>

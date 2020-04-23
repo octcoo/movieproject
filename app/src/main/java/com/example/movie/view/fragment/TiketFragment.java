@@ -1,4 +1,4 @@
-package com.example.movie;
+package com.example.movie.view.fragment;
 
 
 import android.os.Bundle;
@@ -9,14 +9,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.movie.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MovieFragment extends Fragment {
+public class TiketFragment extends Fragment {
 
 
-    public MovieFragment() {
+    public TiketFragment() {
         // Required empty public constructor
     }
 
@@ -25,7 +27,7 @@ public class MovieFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_movie, container, false);
+        return inflater.inflate(R.layout.fragment_tiket, container, false);
     }
 
 }
