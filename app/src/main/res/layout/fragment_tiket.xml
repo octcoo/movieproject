@@ -6,10 +6,86 @@
     tools:context=".TiketFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="ini fragment tiket"
-        android:textSize="50dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pemesanan Tiket"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:padding="10dp"/>
 
+        <TextView
+
+            android:layout_marginTop="100dp"
+            android:layout_width="100dp"
+            android:textSize="20dp"
+            android:layout_height="wrap_content"
+            android:text="Judul Film"
+            android:layout_marginStart="10dp"/>
+
+        <EditText
+            android:id="@+id/edit1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:layout_marginTop="170dp"
+            android:layout_width="130dp"
+            android:textSize="20dp"
+            android:layout_height="wrap_content"
+            android:text="Jam Tayang"
+            android:layout_marginStart="10dp"/>
+
+         <EditText
+             android:id="@+id/edit2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="170dp"
+            android:layout_marginStart="150dp"
+             android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:layout_marginTop="240dp"
+            android:layout_width="130dp"
+            android:textSize="20dp"
+            android:layout_height="wrap_content"
+            android:text="Beli berapa tiket?"
+            android:layout_marginStart="10dp"/>
+
+         <NumberPicker
+            android:id="@+id/edit3"
+             android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="240dp"
+            android:layout_marginEnd="10dp" />
+
+          <TextView
+             android:layout_marginTop="310dp"
+              android:layout_width="130dp"
+             android:textSize="20dp"
+            android:layout_height="wrap_content"
+            android:text="Total harga"
+             android:layout_marginStart="10dp"/>
+
+        <EditText
+             android:id="@+id/edit4"
+             android:layout_width="match_parent"
+             android:layout_height="49dp"
+             android:layout_marginStart="150dp"
+             android:layout_marginTop="310dp"
+             android:layout_marginEnd="150dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="380dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:text="Beli"
+        android:textSize="20dp"/>
 </FrameLayout>
