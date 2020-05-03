@@ -19,12 +19,6 @@
         android:layout_height="match_parent"
         android:layout_weight="1"/>
 
-            <fragment
-                android:name="com.example.movie.view.fragment.TiketFragment"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"/>
-
         </FrameLayout>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/activitymain_bottomnav"
