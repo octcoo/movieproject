@@ -1,5 +1,7 @@
 package com.example.movie.view.viewmodel;
 
+import android.util.Log;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
@@ -30,11 +32,13 @@ public class MovieViewModel extends ViewModel {
                 if (responseMovie != null && responseMovie.getResults() != null){
                     ArrayList<MovieResultsItem> movieItems = responseMovie.getResults();
                     listMovie.postValue(movieItems);
+                    Log.e("MovieViewModel", "onSuccess" );
                 }
             }
 
             @Override
             public void onFailure(Call<MovieResponse> call, Throwable t) {
+                Log.e("MovieViewModel", "onFailure : "+t.getMessage() );
 
             }
         });

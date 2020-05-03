@@ -36,7 +36,7 @@ public class MovieResultsItem {
 	private double popularity;
 
 	@SerializedName("vote_average")
-	private int voteAverage;
+	private double voteAverage;
 
 	@SerializedName("id")
 	private int id;
@@ -127,11 +127,11 @@ public class MovieResultsItem {
 		return popularity;
 	}
 
-	public void setVoteAverage(int voteAverage){
+	public void setVoteAverage(double voteAverage){
 		this.voteAverage = voteAverage;
 	}
 
-	public int getVoteAverage(){
+	public double getVoteAverage(){
 		return voteAverage;
 	}
 
