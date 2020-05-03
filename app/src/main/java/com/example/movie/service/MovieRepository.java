@@ -6,6 +6,6 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 
 public interface MovieRepository {
-    @GET("3/discover/movie?api_key=05faacecb1bb8a123ad56542b1708bad")
+    @GET("3/discover/movie?api_key=18c77ebd8f9e2ab1dc05064b2569b94c")
     Call<MovieResponse> getMovie();
 }
