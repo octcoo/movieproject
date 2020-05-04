@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.fragment.TiketFragment">
+    android:background="#212e61"
+    tools:context=".view.fragment.MovieFragment"
+    android:orientation="vertical">
 
-        <!-- TODO: Update blank fragment layout -->
-        <RelativeLayout
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_movie"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:background="#e3e168"
-            android:layout_marginBottom="30dp">
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_list"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="Movie Choices"
-                    android:layout_marginTop="30dp"
-                    android:textSize="30dp"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textAlignment="center"/>
-        </RelativeLayout>
-</FrameLayout>
+
+</LinearLayout>
