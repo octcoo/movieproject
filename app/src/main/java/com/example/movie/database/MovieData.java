@@ -23,9 +23,6 @@ public class MovieData {
     @ColumnInfo(name = "strposter_path")
     private String strPosterPath;
 
-    @ColumnInfo(name = "strRelease_date")
-    private String strReleaseDate;
-
     @ColumnInfo(name = "strVote_average")
     private double strVoteAverage;
 
@@ -57,16 +54,6 @@ public class MovieData {
     public void setStrPosterPath(String strPosterPath) {
         this.strPosterPath = strPosterPath;
     }
-
-
-    public String getStrReleaseDate() {
-        return strReleaseDate;
-    }
-
-    public void setStrReleaseDate(String strReleaseDate) {
-        this.strReleaseDate = strReleaseDate;
-    }
-
 
     public double getStrVoteAverage() {
         return strVoteAverage;

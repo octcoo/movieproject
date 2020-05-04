@@ -79,17 +79,9 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
                 @Override
                 public void onClick(View view) {
                     MovieData movieData = new MovieData();
-                    movieData.setStrOriginalLanguage(movieItems.get(position).getStrOriginalLanguage());
-                    movieData.setStrOriginalTitle(movieItems.get(position).getStrOriginalTitle());
-                    movieData.setStrOverview(movieItems.get(position).getStrOverview());
-                    movieData.setStrBackdropPath(movieItems.get(position).getStrBackdropPath());
-                    movieData.setStrPopularity(movieItems.get(position).getStrPopularity());
                     movieData.setStrPosterPath(movieItems.get(position).getStrPosterPath());
-                    movieData.setStrReleaseDate(movieItems.get(position).getStrReleaseDate());
                     movieData.setStrTitle(movieItems.get(position).getStrTitle());
                     movieData.setStrVoteAverage(movieItems.get(position).getStrVoteAverage());
-                    movieData.setIntGenreIds(movieItems.get(position).getIntGenreIds());
-                    movieData.setIntVoteCount(movieItems.get(position).getIntVoteCount());
                     movieData.setId(movieItems.get(position).getId());
 
                     appDatabase.dao().insertData(movieData);
