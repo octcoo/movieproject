@@ -2,8 +2,6 @@ package com.example.movie.model.movie;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.List;
-
 public class MovieResultsItem {
 
 	@SerializedName("strOverview")
@@ -22,7 +20,7 @@ public class MovieResultsItem {
 	private String strTitle;
 
 	@SerializedName("intGenre_ids")
-	private List<Integer> intGenreIds;
+	private int intGenreIds;
 
 	@SerializedName("strposter_path")
 	private String strPosterPath;
@@ -72,13 +70,13 @@ public class MovieResultsItem {
 		return strOriginalTitle;
 	}
 
-	public void setBolVideo(boolean video){
-		this.bolVideo = bolVideo;
-	}
-
-	public boolean isVideo(){
-		return bolVideo;
-	}
+//	public void setBolVideo(boolean video){
+//		this.bolVideo = bolVideo;
+//	}
+//
+//	public boolean isVideo(){
+//		return bolVideo;
+//	}
 
 	public void setStrTitle(String strTitle){
 		this.strTitle = strTitle;
@@ -88,7 +86,7 @@ public class MovieResultsItem {
 		return strTitle;
 	}
 
-	public void setIntGenreIds(List<Integer> intGenreIds){
+	public void setIntGenreIds(int intGenreIds){
 		this.intGenreIds = intGenreIds;
 	}
 
@@ -167,7 +165,7 @@ public class MovieResultsItem {
 			"overview = '" + strOverview + '\'' +
 			",original_language = '" + strOriginalLanguage + '\'' +
 			",original_title = '" + strOriginalTitle + '\'' +
-			",video = '" + bolVideo + '\'' +
+//			",video = '" + bolVideo + '\'' +
 			",title = '" + strTitle + '\'' +
 			",genre_ids = '" + intGenreIds + '\'' +
 			",poster_path = '" + strPosterPath + '\'' +
