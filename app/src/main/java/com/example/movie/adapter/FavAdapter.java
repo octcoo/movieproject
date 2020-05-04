@@ -12,7 +12,6 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.example.movie.R;
 import com.example.movie.database.AppDatabase;
 import com.example.movie.database.MovieData;
@@ -30,7 +29,7 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.Holder> {
     public FavAdapter(Context context, List<MovieData> list, MainContact.delete viewDel) {
         this.context = context;
         this.list = list;
-        this.viewDel = viewDel;
+//        this.viewDel = viewDel;
     }
 
     @NonNull
@@ -44,8 +43,8 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.Holder> {
     @Override
     public void onBindViewHolder(@NonNull FavAdapter.Holder holder, final int position) {
         holder.bind(position);
-        Glide.with(context).load(list.get(position).getStrPosterPath())  //PANGGIL GAMBARNYA WOIII
-               .into(holder.ivMovie);
+        // Glide.with(context).load(list.get(position).getStrTeamBadge())  //PANGGIL GAMBARNYA WOIII
+        //        .into(holder.iv_img_club);
     }
 
     @Override
@@ -61,7 +60,7 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.Holder> {
         String tampil;
         public Holder(@NonNull View itemView) {
             super(itemView);//lovefav
-            cvItem = itemView.findViewById(R.id.itemlist_cv);
+            //cvItem = itemView.findViewById(R.id.itemlist_cv);
             ivMovie = itemView.findViewById(R.id.movieimgfav_iv);
             tvJudul = itemView.findViewById(R.id.movietitlefav_tv);
             tvRate = itemView.findViewById(R.id.itemlistfav_tv_rate);
