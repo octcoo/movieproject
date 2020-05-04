@@ -48,11 +48,12 @@
             android:layout_marginTop="285dp"
             android:text="10.0"/>
 
-        <ImageView
+        <ImageButton
             android:id="@+id/loveclick"
+            android:background="#ffffff"
             android:src="@drawable/love"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_marginTop="285dp"
             android:layout_marginStart="160dp"/>
 </androidx.cardview.widget.CardView>

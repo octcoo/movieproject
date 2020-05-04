@@ -72,6 +72,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             ivMovie = itemView.findViewById(R.id.movieimg_iv);
             tvJudul = itemView.findViewById(R.id.movietitle_tv);
             tvRate = itemView.findViewById(R.id.itemlist_tv_rate);
+            loveclick = itemView.findViewById(R.id.loveclick);
             appDatabase = AppDatabase.iniDb(context);
         }
         public void bind(final int position) {
