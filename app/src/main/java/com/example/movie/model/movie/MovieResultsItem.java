@@ -92,7 +92,7 @@ public class MovieResultsItem {
 		this.intGenreIds = intGenreIds;
 	}
 
-	public List<Integer> getIntGenreIds(){
+	public int getIntGenreIds(){
 		return intGenreIds;
 	}
 
