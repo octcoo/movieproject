@@ -69,7 +69,7 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.Holder> {
         public void bind(int position) {
             //MENAMPILKAN DATA
             final MovieData movieData = list.get(position);
-            ivMovie.setImageURI(Uri.parse(movieData.getStrPosterPath()));
+           ivMovie.setImageURI(Uri.parse(movieData.getStrPosterPath()));
             tvJudul.setText(movieData.getStrTitle());
             tvRate.setText((int) movieData.getStrVoteAverage());
 //          btnDel.setOnClickListener(new View.OnClickListener() {
