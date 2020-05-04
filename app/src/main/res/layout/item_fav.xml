@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/itemfav_cv"
     android:orientation="vertical"
-    android:layout_width="370dp"
+    android:layout_width="390dp"
     android:layout_height="230dp"
-    android:layout_marginStart="20dp"
+    android:layout_marginStart="40dp"
     android:layout_marginBottom="20dp"
     android:layout_marginTop="20dp"
     app:layout_constraintCircleRadius="30dp"
-    android:outlineSpotShadowColor="@color/colorPrimaryDark">
+    android:background="@drawable/shape">
 
 
     <ImageView
@@ -49,11 +49,12 @@
         android:layout_marginTop="-30dp"
         android:text="10.0"/>
 
-    <ImageView
+    <ImageButton
         android:id="@+id/lovefav"
         android:src="@drawable/love2"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:background="#ffffff"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_marginTop="40dp"
         android:layout_marginStart="330dp"/>
 

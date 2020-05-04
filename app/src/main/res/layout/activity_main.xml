@@ -9,21 +9,21 @@
 
 
 
-        <FrameLayout
-            android:id="@+id/activitymain_fragment"
+    <FrameLayout
+        android:id="@+id/activitymain_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+
+
+        <fragment
+            android:name="com.example.movie.view.fragment.MovieFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"/>
 
-
-
-            <fragment
-                android:name="com.example.movie.view.fragment.MovieFragment"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"/>
-
-        </FrameLayout>
+    </FrameLayout>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/activitymain_bottomnav"
         android:layout_width="match_parent"

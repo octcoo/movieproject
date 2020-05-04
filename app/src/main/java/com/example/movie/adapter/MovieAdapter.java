@@ -48,10 +48,10 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull MovieAdapter.ViewHolder holder, int position) {
-        holder.bind(position);
-        Glide.with(context).load(BASE_IMAGE_URL+movieItems.get(position).getStrPosterPath()).into(holder.ivMovie);
-        holder.tvJudul.setText(movieItems.get(position).getStrTitle());
-        holder.tvRate.setText(String.valueOf(movieItems.get(position).getStrVoteAverage()));
+        final MovieResultsItem item = movieItems.get(position);
+        Glide.with(context).load(BASE_IMAGE_URL+item.getStrPosterPath()).into(holder.ivMovie);
+        holder.tvJudul.setText(item.getStrTitle());
+        holder.tvRate.setText(String.valueOf(item.getStrVoteAverage()));
     }
 
     @Override
