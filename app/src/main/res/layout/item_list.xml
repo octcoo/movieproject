@@ -49,6 +49,7 @@
             android:text="10.0"/>
 
         <ImageView
+            android:id="@+id/loveclick"
             android:src="@drawable/love"
             android:layout_width="25dp"
             android:layout_height="25dp"
