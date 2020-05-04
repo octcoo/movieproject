@@ -79,7 +79,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
                 @Override
                 public void onClick(View view) {
                     MovieData movieData = new MovieData();
-                    movieData.setStrOriginalLanguage(movieItems.get(position).getStrOriginalLanguage()
+                    movieData.setStrOriginalLanguage(movieItems.get(position).getStrOriginalLanguage());
                     movieData.setStrOriginalTitle(movieItems.get(position).getStrOriginalTitle());
                     movieData.setStrOverview(movieItems.get(position).getStrOverview());
                     movieData.setStrBackdropPath(movieItems.get(position).getStrBackdropPath());

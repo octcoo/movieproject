@@ -6,8 +6,6 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import java.util.List;
-
 @Entity (tableName = "movie_fav")
 public class MovieData {
 
@@ -32,7 +30,7 @@ public class MovieData {
     private String strTitle;
 
     @ColumnInfo(name = "intGenre_ids")
-    private List<Integer> intGenreIds;
+    private int intGenreIds;
 
     @ColumnInfo(name = "strposter_path")
     private String strPosterPath;
@@ -106,11 +104,11 @@ public class MovieData {
         this.strTitle = strTitle;
     }
 
-    public List<Integer> getIntGenreIds() {
+    public int getIntGenreIds() {
         return intGenreIds;
     }
 
-    public void setIntGenreIds(List<Integer> intGenreIds) {
+    public void setIntGenreIds(int intGenreIds) {
         this.intGenreIds = intGenreIds;
     }
 

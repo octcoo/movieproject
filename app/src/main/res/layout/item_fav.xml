@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemfav_cv"
     android:orientation="vertical"
     android:layout_width="370dp"
     android:layout_height="230dp"
@@ -12,14 +13,14 @@
 
 
     <ImageView
-        android:id="@+id/movieimg_iv"
+        android:id="@+id/movieimgfav_iv"
         android:layout_margin="10dp"
         android:src="@drawable/ic_launcher_background"
         android:layout_width="180dp"
         android:layout_height="230dp"/>
 
     <TextView
-        android:id="@+id/movietitle_tv"
+        android:id="@+id/movietitlefav_tv"
         android:text="Movie Title"
         android:textSize="20dp"
         android:textStyle="bold"
@@ -29,7 +30,7 @@
         android:layout_height="30dp"/>
 
     <ImageView
-        android:id="@+id/img_str"
+        android:id="@+id/imgfav_str"
         android:src="@drawable/star"
         android:layout_marginStart="50dp"
         android:layout_width="match_parent"
@@ -39,7 +40,7 @@
 
 
     <TextView
-        android:id="@+id/itemlist_tv_rate"
+        android:id="@+id/itemlistfav_tv_rate"
         android:textSize="20dp"
         android:layout_width="match_parent"
         android:layout_height="30dp"
@@ -48,6 +49,7 @@
         android:text="10.0"/>
 
     <ImageView
+        android:id="@+id/lovefav"
         android:src="@drawable/love2"
         android:layout_width="30dp"
         android:layout_height="30dp"
