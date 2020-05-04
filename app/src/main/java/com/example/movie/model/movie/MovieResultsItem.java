@@ -70,13 +70,13 @@ public class MovieResultsItem {
 		return strOriginalTitle;
 	}
 
-//	public void setBolVideo(boolean video){
-//		this.bolVideo = bolVideo;
-//	}
-//
-//	public boolean isVideo(){
-//		return bolVideo;
-//	}
+	public void setBolVideo(boolean video){
+		this.bolVideo = bolVideo;
+	}
+
+	public boolean isVideo(){
+		return bolVideo;
+	}
 
 	public void setStrTitle(String strTitle){
 		this.strTitle = strTitle;
@@ -165,7 +165,7 @@ public class MovieResultsItem {
 			"overview = '" + strOverview + '\'' +
 			",original_language = '" + strOriginalLanguage + '\'' +
 			",original_title = '" + strOriginalTitle + '\'' +
-//			",video = '" + bolVideo + '\'' +
+			",video = '" + bolVideo + '\'' +
 			",title = '" + strTitle + '\'' +
 			",genre_ids = '" + intGenreIds + '\'' +
 			",poster_path = '" + strPosterPath + '\'' +
