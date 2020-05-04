@@ -1,16 +1,16 @@
 package com.example.movie.view.activity;
 
 
+import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import android.os.Bundle;
-import android.view.MenuItem;
-
 import com.example.movie.R;
+import com.example.movie.view.fragment.FavFragment;
 import com.example.movie.view.fragment.MovieFragment;
-import com.example.movie.view.fragment.TiketFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -38,8 +38,8 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 loadFragment(selectedFragment);
                 break;
 
-            case R.id.menu_bottomnav_tiket:
-                selectedFragment = new TiketFragment();
+            case R.id.menu_bottomnav_fav:
+                selectedFragment = new FavFragment();
                 loadFragment(selectedFragment);
                 break;
         }
