@@ -43,8 +43,8 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.Holder> {
     @Override
     public void onBindViewHolder(@NonNull FavAdapter.Holder holder, final int position) {
         holder.bind(position);
-        // Glide.with(context).load(list.get(position).getStrTeamBadge())  //PANGGIL GAMBARNYA WOIII
-        //        .into(holder.iv_img_club);
+       // Glide.with(context).load(list.get(position).getStrPosterPath())  //PANGGIL GAMBARNYA WOIII
+        //      .into(holder.ivMovie);
     }
 
     @Override
