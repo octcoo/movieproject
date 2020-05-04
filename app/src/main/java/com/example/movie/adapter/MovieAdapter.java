@@ -13,7 +13,6 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.example.movie.R;
 import com.example.movie.database.AppDatabase;
 import com.example.movie.database.MovieData;
@@ -27,36 +26,52 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
     private Context context;
     AppDatabase appDatabase;
 
-    private static  String BASE_IMAGE_URL = "https://image.tmdb.org/t/p/w185/";
+    //private static  String BASE_IMAGE_URL = "https://image.tmdb.org/t/p/w185/";
 
     public MovieAdapter(Context context) {
         this.context = context;
     }
 
     public void setData(ArrayList<MovieResultsItem> items){
-       movieItems.clear();
-       movieItems.addAll(items);
-       notifyDataSetChanged();
-   }
+        movieItems.clear();
+        movieItems.addAll(items);
+        notifyDataSetChanged();
+    }
 
     @NonNull
     @Override
     public MovieAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-       View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_list,parent,false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MovieAdapter.ViewHolder holder, int position) {
-        final MovieResultsItem item = movieItems.get(position);
-        Glide.with(context).load(BASE_IMAGE_URL+item.getStrPosterPath()).into(holder.ivMovie);
-        holder.tvJudul.setText(item.getStrTitle());
-        holder.tvRate.setText(String.valueOf(item.getStrVoteAverage()));
+    public void onBindViewHolder(@NonNull MovieAdapter.ViewHolder holder, final int position) {
+        //holder.bind(position);
+        //Glide.with(context).load(BASE_IMAGE_URL+movieItems.get(position)
+        //     .getStrPosterPath()).into(holder.ivMovie);
+
+        holder.tvJudul.setText(movieItems.get(position).getStrTitle());
+        holder.tvRate.setText(String.valueOf(movieItems.get(position).getStrVoteAverage()));
+        holder.loveclick.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                MovieData movieData = new MovieData();
+                movieData.setStrPosterPath(movieItems.get(position).getStrPosterPath());
+                movieData.setStrTitle(movieItems.get(position).getStrTitle());
+                movieData.setStrVoteAverage(movieItems.get(position).getStrVoteAverage());
+                movieData.setId(movieItems.get(position).getId());
+
+                appDatabase.dao().insertData(movieData);
+                Toast.makeText(context, "SAVE TO FAVORITE", Toast.LENGTH_SHORT).show();
+                Log.d("MovieAdapter", "Save to favorite Success");
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
-       //meberikan data sebanyak dari luar ke sini.
+        //meberikan data sebanyak dari luar ke sini.
         return movieItems.size();
     }
 
@@ -74,7 +89,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             loveclick = itemView.findViewById(R.id.loveclick);
             appDatabase = AppDatabase.iniDb(context);
         }
-        public void bind(final int position) {
+       /* public void bind(final int position) {
             loveclick.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -89,6 +104,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
                     Log.d("MovieAdapter", "Save to favorite Success");
                 }
             });
-        }
+        }*/
     }
 }

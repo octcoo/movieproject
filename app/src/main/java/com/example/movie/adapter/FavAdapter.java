@@ -1,10 +1,10 @@
 package com.example.movie.adapter;
 
 import android.content.Context;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -43,8 +43,8 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.Holder> {
     @Override
     public void onBindViewHolder(@NonNull FavAdapter.Holder holder, final int position) {
         holder.bind(position);
-//        Glide.with(context).load(list.get(position).getStrTeamBadge())  //PANGGIL GAMBARNYA WOIII
-//                .into(holder.iv_img_club);
+        // Glide.with(context).load(list.get(position).getStrTeamBadge())  //PANGGIL GAMBARNYA WOIII
+        //        .into(holder.iv_img_club);
     }
 
     @Override
@@ -56,28 +56,31 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.Holder> {
         ImageView ivMovie;
         TextView tvJudul, tvRate;
         CardView cvItem;
-
-           public Holder(@NonNull View itemView) {
-                super(itemView);
-                cvItem = itemView.findViewById(R.id.itemlist_cv);
-                ivMovie = itemView.findViewById(R.id.movieimg_iv);
-                tvJudul = itemView.findViewById(R.id.movietitle_tv);
-                tvRate = itemView.findViewById(R.id.itemlist_tv_rate);
+        ImageButton imageView;
+        String tampil;
+        public Holder(@NonNull View itemView) {
+            super(itemView);//lovefav
+            //cvItem = itemView.findViewById(R.id.itemlist_cv);
+            ivMovie = itemView.findViewById(R.id.movieimgfav_iv);
+            tvJudul = itemView.findViewById(R.id.movietitlefav_tv);
+            tvRate = itemView.findViewById(R.id.itemlistfav_tv_rate);
+            imageView = itemView.findViewById(R.id.lovefav);
         }
 
 
         public void bind(int position) {
             //MENAMPILKAN DATA
             final MovieData movieData = list.get(position);
-           ivMovie.setImageURI(Uri.parse(movieData.getStrPosterPath()));
+            //ivMovie.setImageURI(movieData.getStrPosterPath());
             tvJudul.setText(movieData.getStrTitle());
-            tvRate.setText((int) movieData.getStrVoteAverage());
-//          btnDel.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    viewDel.deleteData(movieData);
-//                }
-            };
+            tvRate.setText(String.valueOf(movieData.getStrVoteAverage()));
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    viewDel.deleteData(movieData);
+                }
+            });
         }
     }
+}
 

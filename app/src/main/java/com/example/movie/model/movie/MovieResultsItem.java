@@ -159,23 +159,23 @@ public class MovieResultsItem {
 	}
 
 	@Override
- 	public String toString(){
-		return 
-			"MovieResultsItem{" +
-			"overview = '" + strOverview + '\'' +
-			",original_language = '" + strOriginalLanguage + '\'' +
-			",original_title = '" + strOriginalTitle + '\'' +
-			",video = '" + bolVideo + '\'' +
-			",title = '" + strTitle + '\'' +
-			",genre_ids = '" + intGenreIds + '\'' +
-			",poster_path = '" + strPosterPath + '\'' +
-			",backdrop_path = '" + strBackdropPath + '\'' +
-			",release_date = '" + strReleaseDate + '\'' +
-			",popularity = '" + strPopularity + '\'' +
-			",vote_average = '" + strVoteAverage + '\'' +
-			",id = '" + id + '\'' + 
-			",adult = '" + bolAdult + '\'' +
-			",vote_count = '" + intVoteCount + '\'' +
-			"}";
-		}
+	public String toString(){
+		return
+				"MovieResultsItem{" +
+						"overview = '" + strOverview + '\'' +
+						",original_language = '" + strOriginalLanguage + '\'' +
+						",original_title = '" + strOriginalTitle + '\'' +
+						",video = '" + bolVideo + '\'' +
+						",title = '" + strTitle + '\'' +
+						",genre_ids = '" + intGenreIds + '\'' +
+						",poster_path = '" + strPosterPath + '\'' +
+						",backdrop_path = '" + strBackdropPath + '\'' +
+						",release_date = '" + strReleaseDate + '\'' +
+						",popularity = '" + strPopularity + '\'' +
+						",vote_average = '" + strVoteAverage + '\'' +
+						",id = '" + id + '\'' +
+						",adult = '" + bolAdult + '\'' +
+						",vote_count = '" + intVoteCount + '\'' +
+						"}";
+	}
 }
