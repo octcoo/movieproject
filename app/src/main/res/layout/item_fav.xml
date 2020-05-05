@@ -4,7 +4,7 @@
     android:id="@+id/itemfav_cv"
     android:orientation="vertical"
     android:layout_width="390dp"
-    android:layout_height="230dp"
+    android:layout_height="240dp"
     android:layout_marginStart="40dp"
     android:layout_marginBottom="20dp"
     android:layout_marginTop="20dp"
@@ -14,10 +14,12 @@
 
     <ImageView
         android:id="@+id/movieimgfav_iv"
-        android:layout_margin="10dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/shape"
+        android:layout_marginLeft="-10dp"
         android:src="@drawable/ic_launcher_background"
         android:layout_width="180dp"
-        android:layout_height="230dp"/>
+        android:layout_height="215dp"/>
 
 
     <TextView

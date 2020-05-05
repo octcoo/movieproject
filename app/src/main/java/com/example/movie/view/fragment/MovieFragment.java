@@ -49,14 +49,16 @@ public class MovieFragment extends Fragment {
 
         movieAdapter = new MovieAdapter(getContext());
         movieAdapter.notifyDataSetChanged();
-
+        //layout yang digunakan
         rvMovie = view.findViewById(R.id.recyclerview_movie);
         rvMovie.setLayoutManager(new GridLayoutManager(getContext(),2));
 
+        //tampil data
         movieViewModel = new ViewModelProvider(this).get(MovieViewModel.class);
         movieViewModel.setMovie();
         movieViewModel.getMovie().observe(this,getMovie);
 
+        //settingan adapter
         rvMovie.setAdapter(movieAdapter);
 
     }

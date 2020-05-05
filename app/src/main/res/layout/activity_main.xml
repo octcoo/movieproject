@@ -28,7 +28,7 @@
         android:id="@+id/activitymain_bottomnav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#a8cde6"
+        android:background="#e0da7b"
         app:menu="@menu/menu_bottomnav" />
 
 </LinearLayout>

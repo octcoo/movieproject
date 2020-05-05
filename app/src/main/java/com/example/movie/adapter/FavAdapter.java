@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.movie.R;
 import com.example.movie.database.AppDatabase;
 import com.example.movie.database.MovieData;
@@ -43,8 +44,8 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.Holder> {
     @Override
     public void onBindViewHolder(@NonNull FavAdapter.Holder holder, int position) {
         holder.bind(position);
-        //Glide.with(context).load(BASE_IMAGE_URL+list.get(position)
-        //      .getStrPosterPath()).into(holder.ivMovie);
+        Glide.with(context).load(BASE_IMAGE_URL+list.get(position)
+              .getStrPosterPath()).into(holder.ivMovie);
     }
 
     @Override
@@ -72,8 +73,8 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.Holder> {
         public void bind(int position) {
             //MENAMPILKAN DATA
             final MovieData movieData = list.get(position);
-            //ivMovie.setImageURI(Uri.parse(BASE_IMAGE_URL+movieData.getStrPosterPath()));
-//             ivMovie.setImageResource(Integer.parseInt(BASE_IMAGE_URL+movieData.getStrPosterPath()));
+           // ivMovie.setImageURI(Uri.parse(BASE_IMAGE_URL+movieData.getStrPosterPath()));
+            //ivMovie.setImageResource(Integer.parseInt(BASE_IMAGE_URL+movieData.getStrPosterPath()));
 
             tvJudul.setText(movieData.getStrTitle());
             tvRate.setText(String.valueOf(movieData.getStrVoteAverage()));

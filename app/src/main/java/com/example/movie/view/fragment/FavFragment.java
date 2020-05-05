@@ -61,7 +61,7 @@ public class FavFragment extends Fragment implements MainContact.delete {
     private void readData(AppDatabase database) {
         List list;
         list = database.dao().getData();
-        favAdapter = new FavAdapter(context, list, this);
+        favAdapter = new FavAdapter(getContext(), list, this);
         recyclerView.setAdapter(favAdapter);
     }
 
