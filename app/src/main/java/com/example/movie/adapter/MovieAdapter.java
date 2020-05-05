@@ -50,7 +50,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
     public void onBindViewHolder(@NonNull MovieAdapter.ViewHolder holder, final int position) {
         holder.bind(position);
         Glide.with(context).load(BASE_IMAGE_URL+movieItems.get(position)
-             .getPosterPath()).into(holder.ivMovie);
+                .getPosterPath()).into(holder.ivMovie);
 
         holder.tvJudul.setText(movieItems.get(position).getTitle());
         holder.tvRate.setText(String.valueOf(movieItems.get(position).getVoteAverage()));

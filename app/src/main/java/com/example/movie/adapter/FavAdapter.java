@@ -25,11 +25,11 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.Holder> {
     private MainContact.delete viewDel;
     private AppDatabase appDatabase;
     private MovieData movieData;
-
+    private static  String BASE_IMAGE_URL = "https://image.tmdb.org/t/p/w185";
     public FavAdapter(Context context, List<MovieData> list, MainContact.delete viewDel) {
         this.context = context;
         this.list = list;
-//        this.viewDel = viewDel;
+        this.viewDel = viewDel;
     }
 
     @NonNull
@@ -41,10 +41,10 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.Holder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull FavAdapter.Holder holder, final int position) {
+    public void onBindViewHolder(@NonNull FavAdapter.Holder holder, int position) {
         holder.bind(position);
-       // Glide.with(context).load(list.get(position).getStrPosterPath())  //PANGGIL GAMBARNYA WOIII
-        //      .into(holder.ivMovie);
+        //Glide.with(context).load(BASE_IMAGE_URL+list.get(position)
+        //      .getStrPosterPath()).into(holder.ivMovie);
     }
 
     @Override
@@ -56,7 +56,7 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.Holder> {
         ImageView ivMovie;
         TextView tvJudul, tvRate;
         CardView cvItem;
-        ImageButton imageView;
+        ImageButton imageView, ivTrash;
         String tampil;
         public Holder(@NonNull View itemView) {
             super(itemView);//lovefav
@@ -65,16 +65,19 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.Holder> {
             tvJudul = itemView.findViewById(R.id.movietitlefav_tv);
             tvRate = itemView.findViewById(R.id.itemlistfav_tv_rate);
             imageView = itemView.findViewById(R.id.lovefav);
+            ivTrash = itemView.findViewById(R.id.trash);
         }
 
 
         public void bind(int position) {
             //MENAMPILKAN DATA
             final MovieData movieData = list.get(position);
-            //ivMovie.setImageURI(movieData.getStrPosterPath());
+            //ivMovie.setImageURI(Uri.parse(BASE_IMAGE_URL+movieData.getStrPosterPath()));
+//             ivMovie.setImageResource(Integer.parseInt(BASE_IMAGE_URL+movieData.getStrPosterPath()));
+
             tvJudul.setText(movieData.getStrTitle());
             tvRate.setText(String.valueOf(movieData.getStrVoteAverage()));
-            imageView.setOnClickListener(new View.OnClickListener() {
+            ivTrash.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     viewDel.deleteData(movieData);
@@ -83,4 +86,3 @@ public class FavAdapter extends RecyclerView.Adapter<FavAdapter.Holder> {
         }
     }
 }
-

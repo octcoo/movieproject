@@ -51,13 +51,13 @@ public class MovieResponse{
 	}
 
 	@Override
- 	public String toString(){
-		return 
-			"MovieResponse{" + 
-			"page = '" + page + '\'' + 
-			",total_pages = '" + totalPages + '\'' + 
-			",results = '" + results + '\'' + 
-			",total_results = '" + totalResults + '\'' + 
-			"}";
-		}
+	public String toString(){
+		return
+				"MovieResponse{" +
+						"page = '" + page + '\'' +
+						",total_pages = '" + totalPages + '\'' +
+						",results = '" + results + '\'' +
+						",total_results = '" + totalResults + '\'' +
+						"}";
+	}
 }
